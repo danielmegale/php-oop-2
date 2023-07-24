@@ -49,27 +49,31 @@ $prodotti = [$cibo1, $cibo2, $cibo3, $cibo4, $voliera, $filtro, $toy1, $toy2];
 </head>
 
 <body>
-    <div class="card">
+    <div class="d-flex">
         <?php foreach ($prodotti as $prodotto) : ?>
-            <img src="<?= $prodotto->img ?>" alt="">
-            <h3><?= $prodotto->nome ?></h3>
-            <p><?= $prodotto->tipo ?></p>
-            <p><?= $prodotto->prezzo ?></p>
-            <p>
-                <?php if (isset($prodotto->peso)) : ?>
-                    <?= $prodotto->peso ?></p>
-        <?php elseif (isset($prodotto->materiale)) : ?>
-            <?= $prodotto->materiale ?></p>
-        <?php elseif (isset($prodotto->caratteristiche)) : ?>
-            <?= $prodotto->caratteristiche ?></p>
-        <?php endif ?>
-        <?php if (isset($prodotto->dimensioni)) : ?>
-            <?= $prodotto->dimensioni ?>
-        <?php endif ?>
+            <div class="card">
+                <div class="container-img">
+                    <img src="<?= $prodotto->img ?>" alt="">
+                </div>
+                <h3><?= $prodotto->nome ?></h3>
+                <p><?= $prodotto->tipo ?></p>
+                <p><?= $prodotto->prezzo ?></p>
+                <p>
+                    <?php if (isset($prodotto->peso)) : ?>
+                        <?= $prodotto->peso ?></p>
+            <?php elseif (isset($prodotto->materiale)) : ?>
+                <?= $prodotto->materiale ?></p>
+            <?php elseif (isset($prodotto->caratteristiche)) : ?>
+                <?= $prodotto->caratteristiche ?></p>
+            <?php endif ?>
+            <?php if (isset($prodotto->dimensioni)) : ?>
+                <?= $prodotto->dimensioni ?>
+            <?php endif ?>
 
-        </p>
+            </p>
 
-    <?php endforeach ?>
+            </div>
+        <?php endforeach ?>
     </div>
 </body>
 
