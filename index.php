@@ -10,4 +10,12 @@ class Shop
     public $tipo;
     public $prezzo;
     public $img;
+
+    public function __construct($nome, $tipo, $prezzo, $img)
+    {
+        $this->nome = $nome;
+        $this->tipo = $tipo;
+        $this->prezzo = $prezzo;
+        $this->img = $img;
+    }
 }
