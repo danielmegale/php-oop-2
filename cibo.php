@@ -9,10 +9,7 @@ class Cibo extends Shop
 
     public function __construct($nome, $tipo, $prezzo, $img, $peso, $ingredienti)
     {
-        $this->nome = $nome;
-        $this->tipo = $tipo;
-        $this->prezzo = $prezzo;
-        $this->img = $img;
+        parent::__construct($nome, $tipo, $prezzo, $img);
         $this->peso = $peso;
         $this->ingredienti = $ingredienti;
     }
